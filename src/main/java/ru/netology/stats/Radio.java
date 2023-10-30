@@ -33,14 +33,12 @@ public class Radio {
             currentStation++;
         }
     }
-
     public void prev() {
         if (currentStation == 0) {
             currentStation = stationCount - 1;
         } else {
             currentStation--;
         }
-
 
     }
 
