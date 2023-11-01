@@ -76,6 +76,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testNextAfterNineLimit() {
 
@@ -87,6 +88,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testPrevRegular() {
 
@@ -111,6 +113,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void testPrevPreviosLimit() {
 
@@ -177,6 +180,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void testIncreaseVolumeOver() {
 

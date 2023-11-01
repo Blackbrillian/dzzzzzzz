@@ -6,12 +6,13 @@ public class Radio {
     private int stationCount;
 
     public Radio(int stationCount) {
-        this.stationCount=stationCount;
+        this.stationCount = stationCount;
     }
 
-    public Radio (){
-        this.stationCount=10;
+    public Radio() {
+        this.stationCount = 10;
     }
+
     public int getCurrentStation() {
         return currentStation;
     }
@@ -33,6 +34,7 @@ public class Radio {
             currentStation++;
         }
     }
+
     public void prev() {
         if (currentStation == 0) {
             currentStation = stationCount - 1;
