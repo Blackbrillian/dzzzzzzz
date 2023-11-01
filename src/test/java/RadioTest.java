@@ -29,6 +29,19 @@ public class RadioTest {
     }
 
     @Test
+    public void setCurrentStationOverLimit() {
+
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(5);
+        radio.setCurrentStation(15);
+        int actual = radio.getCurrentStation();
+        int expected = 5;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void setCurrentStationBellow0() {
 
         Radio radio = new Radio();
@@ -65,6 +78,18 @@ public class RadioTest {
     }
 
     @Test
+    public void testNextAfterNineLimit() {
+
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(14);
+        radio.next();
+        int actual = radio.getCurrentStation();
+        int expected = 0;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testPrevRegular() {
 
         Radio radio = new Radio();
@@ -87,6 +112,18 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public void testPrevPreviosLimit() {
+
+        Radio radio = new Radio(15);
+        radio.setCurrentStation(0);
+        radio.prev();
+        int actual = radio.getCurrentStation();
+        int expected = 14;
+
+        Assertions.assertEquals(expected, actual);
 
     }
 
@@ -143,6 +180,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void testIncreaseVolumeOver() {
 
